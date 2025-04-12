@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    color: white;
+    font-family: Courier New;
+    background-color: #000000;
+    background-image: url('homebackground.png');
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; /* Ensure the background image covers the entire screen */
+
+    }
+  
+
+hr {
+    height: 3px; 
+    border: none;
+    background: linear-gradient(90deg, pink, rgb(233, 142, 233), hotpink);
+    animation: neon-glow 3s infinite linear;
+    width: 150vh;
+}
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      background-color: black;
+      padding: 10px 20px;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 2px 20px rgba(245, 159, 205, 0.42);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 200px;
+  }
+  
+  .sidebar ul li {
+      padding: 0;
+  }
+  
+  .sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 2px;
+      transition: 0.7s;
+      border-bottom: 2px solid pink;
+  }
+  
+  .sidebar ul li a:hover {
+      background-color: pink;
+      color: black;
+      box-shadow: 0 0 20px pink;
+      padding-right: 15px;
+  }
+  .lefttext {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 70px; /* Adds space between image and text */
+    margin: 10vh auto;
+    max-width: 800px; /* Prevents stretching */
+    margin-top: 30vh;
+    margin-left: 20vh;
+}
+
+.image1 img {
+    width: 40vh; 
+    height: 40vh;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid pink;
+    box-shadow: 0px -4px 15px rgba(226, 226, 226, 0.9), 
+              5px 5px 20px rgba(255, 20, 147, 0.7);
+    animation: neon-glow 3s infinite linear; 
+    cursor: pointer;
+}
+
+.lefttext h1, .lefttext p {
+    max-width: 100%;
+    width: 120vh; /* Allows text to spread across 80% of the screen */
+    margin: 0 auto; /* Centers the paragraph */
+    line-height: 1.6; /* Improves readability */
+    font-size: 50px;
+    border: none;
+    margin-top: 20px;
+    
+}
+.highllight {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+      }
+.lefttext p {
+    font-size: 30px;
+}
+@keyframes neon-glow {
+    10% {
+      box-shadow: 0px 0px 10px pink, 0px 0px 10px rgb(201, 6, 38), 0px 0px 10px pink;
+    }
+    30% {
+      box-shadow: 0px 0px 10px rgb(219, 124, 219), 0px 0px 10px rgb(197, 38, 131), 0px 0px 10px purple;
+    }
+    30% {
+      box-shadow: 0px 0px 10px rgb(67, 16, 160), 0px 0px 10px rgb(20, 36, 124), 0px 0px 10px hotpink;
+    }
+  }
+.red {
+    position: relative;
+    display: inline;
+    padding: 30px;
+}
+.red::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -65px; 
+    width: 100%;
+    height: 50%; 
+    padding-right: 80vh;
+    background-color: rgba(20, 36, 218, 0.5);
+    z-index: -1; 
+}
+.blue {
+    position: relative;
+    display: inline;
+    padding: 30px;
+}
+.blue::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-left: 50px;
+    bottom: -49px;
+    width: 100%;
+    height: 50%; 
+    padding-right: 80vh;
+    background-color: rgba(201, 6, 38, 0.5);
+    z-index: -1; 
+}
+.container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    box-shadow: 0px -4px 15px rgba(241, 147, 197, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 15px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lis {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.lis:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.videos {
+    display: flex; 
+    gap: 80px;
+    justify-content: center;
+    margin-top: 50px;
+
+    
+}
+.vid {
+    text-align: center; 
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    box-shadow: 0px -1px 10px rgba(226, 226, 226, 0.9), 
+    5px 5px 20px rgba(255, 20, 147, 0.7);
+    margin-bottom: 50px; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.vid2 {
+    text-align: center; 
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    box-shadow: 0px -2px 15px rgba(226, 226, 226, 0.9), 
+    5px 5px 20px rgba(255, 20, 147, 0.7);
+    margin-bottom: 50px;    
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.vid3 {
+    text-align: center; 
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    box-shadow: 0px -1px 15px rgba(226, 226, 226, 0.9), 
+    5px 5px 20px rgba(255, 20, 147, 0.7);
+    margin-bottom: 50px;  
+    background-color: rgba(0, 0, 0, 0.7);
+}
+video {
+    border-radius: 10px;
+    border: 2px solid pink;
+    box-shadow: 0px -1px 15px rgba(226, 226, 226, 0.9), 
+    5px 5px 20px rgba(255, 20, 147, 0.7);
+    animation: neon-glow 9s infinite linear;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: 0.7s;
+    border: 2px solid pink;
+    animation: neon-glow 9s infinite linear;
+    box-shadow: 0px -4px 15px rgba(226, 226, 226, 0.9), 
+              5px 5px 20px rgba(255, 20, 147, 0.7);
+    width: 75px;
+    text-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 15px rgb(201, 6, 38);
+}
+  button:hover {
+    opacity: 0.4s;
+    color: rgba(235, 78, 78, 0.7);
+    box-shadow: 0 0 20px pink;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.hrvid {
+    width: 289px;
+}
+.genshintext{
+  text-align: center;
+  font-size: 30px;
+  
+}
+.textvid {
+    text-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 15px rgb(201, 6, 38);
+}
+.anchored {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.anchored:hover {
+    background: rgba(255, 255, 255, 0.3); 
+
+}
+
+ #popup-toggle {
+    display: none;
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #202020;
+    border-radius: 15px;
+    box-shadow: 0 2px 20px rgba(245, 159, 205, 0.42);
+    padding: 20px;
+    width: 200px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 300px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+    animation: slideIn 0.8s ease-out forwards;
+    transform: translateY(30px);
+
+  }
+
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  
+  #popup-toggle:checked ~ .popup {
+    display: none;
+  }
+
+/* loading screen ni */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid #ffffff; 
+    border-top: 4px solid #b6babd; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    background-image: url(kuru.gif);
+}
+#loading-screen img {
+    width: 100px;       
+    height: 100px;       
+    border-radius: 50%;  /
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#main-content {
+    text-align: center;
+    margin-top: 20px;
+}
